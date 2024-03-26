@@ -26,15 +26,27 @@ public class FluentAdvancedExplicitWaitDemo {
 				.withTimeout(Duration.ofSeconds(30L))
                 .pollingEvery(Duration.ofSeconds(5L))
                 .ignoring(NoSuchElementException.class);
-
-			   WebElement flipkartOption = wait.until(new Function<WebDriver, WebElement>() {
-			     public WebElement apply(WebDriver driver) {
-			       return driver.findElement(By.linkText("Flipkart"));
-			     }
-			   });
 		
-		flipkartOption.click();
+		       
 
+			   WebElement flipkartOption = wait.until(new Function<WebDriver,WebElement>(){
+				   	public WebElement apply(WebDriver driver) {
+				   		return driver.findElement(By.linkText("Filpkart"));
+				   	}
+			   });
+			   
+			  /*
+			   WebElement element = wait.until(driver1 -> {
+		            return driver1.findElement(By.id("myElement"));
+		        });
+		        */
+			   
+			   flipkartOption.click();
+	
+	
 	}
+			  
 
+		
 }
+
