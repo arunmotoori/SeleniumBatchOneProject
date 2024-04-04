@@ -29,7 +29,7 @@ public class DisablingWebPushNotificationsFirefoxDemo {
 		 * 
 		 * 
 		 */
-		
+		/*
 		 ProfilesIni profile = new ProfilesIni();
 
 		  FirefoxProfile testprofile = profile.getProfile("default");
@@ -42,8 +42,11 @@ public class DisablingWebPushNotificationsFirefoxDemo {
 
 		  FirefoxOptions options = new FirefoxOptions();
 		  options.setProfile(testprofile);
-		  options.setCapability(CapabilityType.UNHANDLED_PROMPT_BEHAVIOUR, UnexpectedAlertBehaviour.ACCEPT);
-
+		  */
+		
+		FirefoxOptions options = new FirefoxOptions();
+		options.addPreference("geo.enabled",false);
+		
 		FirefoxDriver driver = new FirefoxDriver(options);
 		driver.manage().window().maximize();
 		driver.get("https://www.justdial.com/");
