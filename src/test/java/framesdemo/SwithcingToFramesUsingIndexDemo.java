@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class InternetHerokupAppDemo {
+public class SwithcingToFramesUsingIndexDemo {
 
 	public static void main(String[] args) {
 		
@@ -12,12 +12,12 @@ public class InternetHerokupAppDemo {
 		driver.manage().window().maximize();
 		driver.get("https://the-internet.herokuapp.com/iframe");
 		
-		driver.switchTo().frame("mce_0_ifr");
+		driver.switchTo().frame(0);
 		
-		//WebElement paraText = driver.findElement(By.xpath("//body[@id='tinymce']/p"));
-		WebElement tinyMCEEditorBox = driver.findElement(By.id("tinymce"));
-		tinyMCEEditorBox.clear();
-		tinyMCEEditorBox.sendKeys("Arun Motoori QAFox ");
+		WebElement paraText = driver.findElement(By.xpath("//body[@id='tinymce']/p"));
+		paraText.clear();
+		paraText.sendKeys("Arun Motoori @ QAFox");
+
 	}
 
 }
