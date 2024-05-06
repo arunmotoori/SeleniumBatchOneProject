@@ -74,6 +74,7 @@ public class HandlingSimpleCalendarUsingReusalbeMethod {
 		
 		Month month = ld.getMonth();
 		String expectedMonth = month.toString();
+		System.out.println(expectedMonth);
 		
 		return expectedMonth;
 	}
@@ -83,8 +84,8 @@ public class HandlingSimpleCalendarUsingReusalbeMethod {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		LocalDate ld = LocalDate.parse(userEnteredDate, dtf);
 		
-		int year = ld.getYear();
-		String expectedYear = String.valueOf(year);
+		int year = ld.getYear();  // 2027
+		String expectedYear = String.valueOf(year);  // "2027"
 		return expectedYear;
 		
 	}
@@ -94,8 +95,8 @@ public class HandlingSimpleCalendarUsingReusalbeMethod {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		LocalDate ld = LocalDate.parse(userEnteredDate, dtf);
 		
-		int day = ld.getDayOfMonth();
-		String expectedDay = String.valueOf(day);
+		int day = ld.getDayOfMonth(); // 25
+		String expectedDay = String.valueOf(day);  //"25" 
 
 		return expectedDay;
 	}
